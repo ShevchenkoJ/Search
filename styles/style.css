@@ -563,6 +563,8 @@ body {
 .product_name {
     color: #102542;
     font-size: 2rem;
+    height: 5rem;
+    display: inline-block;
 }
 
 .reviews_wrapper {
@@ -617,7 +619,7 @@ body {
 
 .options_wrapper {
     position: relative;
-    padding: 2.4rem 0 1.4rem;
+    padding: 1.4rem 0 1rem;
 }
 
 .options_text {
