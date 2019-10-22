@@ -605,8 +605,7 @@ body {
     left: -1rem;
 }
 
-.product_price::after {
-    content: '08';
+.product_price_top {
     font-size: 1.5rem;
     position: absolute;
     bottom: 1rem;
