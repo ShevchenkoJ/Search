@@ -79,6 +79,10 @@ body {
     margin: 2rem;
 }
 
+.sidebar_header__mobile {
+    display: none;
+}
+
 .sidebar_item {
     border-radius: 0.3rem;
     box-shadow: 0 0.2rem 0.8rem 0 rgba(19, 33, 66, 0.07);
@@ -713,6 +717,42 @@ body {
 
     .sidebar {
         display: none;
+        top: 10rem;
+        position: relative;
+    }
+
+    .sidebar_header__mobile {
+        display: block;
+        width: 100vw;
+        height: 9rem;
+        text-align: left;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #ffffff;
+        margin: 0 0 2rem 0;
+        padding: 3rem 2rem;
+        box-shadow: 0 3px 10px 0 rgba(19, 33, 66, 0.16);
+        z-index: 1000;
+    }
+
+    .sidebar_header--text {
+        font-size: 3rem;
+        color: #102542;
+    }
+
+    .sidebar_header--close-button {
+        font-size: 5rem;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 3rem;
+        top: 2rem;
+        color: #102542;
+        font-family: Arial;
+    }
+
+    .sidebar_item {
+        z-index: 1;
     }
 
     .show-filter-menu_button {
