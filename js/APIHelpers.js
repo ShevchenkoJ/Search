@@ -11,8 +11,6 @@ API.getDataByInputText = function(form, input) {
                 return res.json();
             })
             .then(function (res) {
-                console.log(res);
-
                 const products = res.response.products;
 
                 const cardsContainer = new CardsContainer(products);
@@ -30,8 +28,6 @@ API.getAllData = function() {
             return res.json();
         })
         .then(function (res) {
-            console.log(res);
-
             const products = res.response.products;
 
             const cardsContainer = new CardsContainer(products);
