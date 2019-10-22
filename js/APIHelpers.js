@@ -18,7 +18,10 @@ API.getDataByInputText = function(form, input) {
 
                 const cards = cardsContainer.createAllCards();
                 cardsContainer.showAllCards(cards);
-            });
+            })
+            .catch(function (e) {
+                alert('Nothing found');
+            })
     });
 };
 
@@ -33,5 +36,8 @@ API.getAllData = function() {
             const cardsContainer = new CardsContainer(products);
             const cards = cardsContainer.createAllCards();
             cardsContainer.showAllCards(cards);
-        });
+        })
+        .catch(function (e) {
+            alert('Nothing found')
+        })
 };
