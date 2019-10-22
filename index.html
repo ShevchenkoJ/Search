@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/reset.css" rel="stylesheet">
+    <title>Search</title>
+</head>
+<body>
+    <div class="container">
+       <form class="sidebar">
+            <div class="sidebar_item styles_filter">
+                <div class="sidebar-header_wrapper">
+                    <span class="sidebar_item__header">Styles</span>
+                    <div class="hide_button"></div>
+                </div>
+                <div class="sidebar_item__content styles-previews_container">
+                    <div class="styles-preview">
+                        <img src="./images/bohemian-copy-3@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="bohemian-style" name="bohemian-style"class="styles_checkbox">
+                        <label for="bohemian-style" class="styles-preview_title">Bohemian (92)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/bohemian-copy-3@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="contemporary-style" name="contemporary-style" class="styles_checkbox" checked>
+                        <label for="contemporary-style" class="styles-preview_title">Contemporary (888)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/outdoor-copy-2@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="outdoor-style" name="outdoor-style"class="styles_checkbox">
+                        <label for="outdoor-style" class="styles-preview_title">Outdoor (187)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/traditional-copy-2@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="traditional-style" name="traditional-style"class="styles_checkbox">
+                        <label for="traditional-style" class="styles-preview_title">Traditional (562)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/outdoor-copy-2@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="traditional-style-2" name="traditional-style-2"class="styles_checkbox">
+                        <label for="traditional-style-2" class="styles-preview_title">Traditional (562)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/traditional-copy-2@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="traditional-style-3" name="traditional-style-3"class="styles_checkbox">
+                        <label for="traditional-style-3" class="styles-preview_title">Traditional (562)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/bohemian-copy-3@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="bohemian-style-2" name="bohemian-style-2"class="styles_checkbox">
+                        <label for="bohemian-style-2" class="styles-preview_title">Bohemian (92)</label>
+                    </div>
+                    <div class="styles-preview">
+                        <img src="./images/bohemian-copy-3@2x.jpg" class="styles-preview_image" alt="">
+                        <input type="checkbox" id="contemporary-style-2" name="contemporary-style-2" class="styles_checkbox">
+                        <label for="contemporary-style-2" class="styles-preview_title">Contemporary (888)</label>
+                    </div>
+                </div>
+                <button type="submit" class="styles_submit__button">
+                    <span class="styles_submit-button__text">More Styles +</span>
+                </button>
+            </div>
+
+            <!--Draggable filter-->
+
+            <div class="sidebar_item price_filter">
+                <p class="sidebar_item_title">Price Range</p>
+
+                <div class="sidebar_item_cost_wrapper">
+                    <div class="sidebar_item_cost_item">
+                        <p class="sidebar_item_cost_item_title">Min $</p>
+                        <input type="text" value="0" id="drag_item_input_min" class="sidebar_item_cost_item_input">
+                    </div>
+                    <div class="sidebar_item_cost_item">
+                        <p class="sidebar_item_cost_item_title">Min $</p>
+                        <input type="text" value="10000" id="drag_item_input_max" class="sidebar_item_cost_item_input">
+                    </div>
+                    <button class="sidebar_item_cost_btn" type="submit">Go</button>
+                </div>
+                <div class="sidebar_item_cost_drag_wrapper">
+                    <div class="sidebar_item_cost_drag_area" id="drag_item_area">
+                        <div class="sidebar_item_cost_drag_item" id="drag_item_min" style="left: 0"></div>
+                        <div class="sidebar_item_cost_drag_item" id="drag_item_max" style="left: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar_item colors_filter">
+                <div class="sidebar_item_header">
+                    <p class="sidebar_item_title">Colors</p>
+                    <span class="sidebar_item_header_arrow">></span>
+                </div>
+                <div class="sidebar_item_row">
+                    <input type="checkbox" id="row1" value="red">
+                    <label for="row1" class="sidebar_item_row_label">Red</label>
+                    <span class="sidebar_item_row_text">
+                        1,221
+                    </span>
+                </div>
+                <div class="sidebar_item_row">
+                    <input type="checkbox" id="row1" value="red">
+                    <label for="row1" class="sidebar_item_row_label">Blue</label>
+                    <span class="sidebar_item_row_text">
+                        1,221
+                    </span>
+                </div>
+                <div class="sidebar_item_row">
+                    <input type="checkbox" id="row1" value="red">
+                    <label for="row1" class="sidebar_item_row_label">Green</label>
+                    <span class="sidebar_item_row_text">
+                        1,221
+                    </span>
+                </div>
+                <div class="sidebar_item_row">
+                    <input type="checkbox" id="row1" value="red">
+                    <label for="row1" class="sidebar_item_row_label">White</label>
+                    <span class="sidebar_item_row_text">
+                        1,221
+                    </span>
+                </div>
+                <div class="sidebar_item_row">
+                    <input type="checkbox" id="row1" value="red">
+                    <label for="row1" class="sidebar_item_row_label">Yellow</label>
+                    <span class="sidebar_item_row_text">
+                        1,221
+                    </span>
+            </div>
+                <button class="sidebar_item_row_btn">More Colors +</button>
+            </div>
+        
+            <div class="sidebar_item reviews_section">
+                <span class="sidebar_item__header">Reviews</span>
+                    <div class="reviews_section__wrapper">
+                        <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                        <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                        <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                        <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                        <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                    </div>
+            </div>
+        </form>
+
+       <div class="products_container">
+           <form class="searchbar">
+                <input type="search" id="searchbar" class="searchbar_textarea" name="searchbar" maxlength="250" placeholder="Search">
+                <button class="searchbar_button">
+                    <img class="searchbar_button__icon" src="./images/search-button.svg" alt="">
+                </button>
+           </form>
+           <div class="products-previews_container">
+                <div class="products-previews_header__wrapper">
+                    <span class="products-previews_header">New Arrival Area Rugs</span>
+                    <span class="products-previews_quantity">431 Results</span>
+                </div>
+                <button class="show-filter-menu-button">Filter</button>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_preview">
+                    <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
+                    <div class="product_preview_content__wrapper">
+                        <span class="product_name">Product Name</span>
+                        <div class="reviews_wrapper">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-scored.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
+                            <span class="rewievs_amount">(134)</span>
+                        </div>
+                        <div class="shipping-offer_wrapper">
+                            <img class="shipping-offer_icon" src="./images/delivery-truck.svg" alt="">
+                            <span class="shipping-offer_text">Shipping Offer</span>
+                        </div>
+                        <span class="product_price">210</span>
+                        <div class="options_wrapper">
+                            <span class="options_text">8 Colors / 15 Sizes</span>
+                            <img class="options__icon" src="./images/wishlist.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+           </div>
+       </div>
+
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
