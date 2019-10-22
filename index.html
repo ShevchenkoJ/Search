@@ -13,8 +13,10 @@
     <div class="container">
        <form class="sidebar">
             <div class="sidebar_item styles_filter">
-                <div class="sidebar-header_wrapper">
-                    <span class="sidebar_item__header">Styles</span>
+                <!--<div class="sidebar-header_wrapper">
+                    <span class="sidebar_item__header">Styles</span>-->
+                <div class="sidebar_item__header">
+                    <p class="sidebar_item__title">Styles</p>
                     <div class="hide_button"></div>
                 </div>
                 <div class="sidebar_item__content styles-previews_container">
@@ -40,11 +42,13 @@
                     </div>
                     <div class="styles-preview">
                         <img src="./images/outdoor-copy-2@2x.jpg" class="styles-preview_image" alt="">
+                        <div class="styles-preview_image--transparent"></div>
                         <input type="checkbox" id="traditional-style-2" name="traditional-style-2"class="styles_checkbox">
                         <label for="traditional-style-2" class="styles-preview_title">Traditional (562)</label>
                     </div>
                     <div class="styles-preview">
                         <img src="./images/traditional-copy-2@2x.jpg" class="styles-preview_image" alt="">
+                        <div class="styles-preview_image--transparent"></div>
                         <input type="checkbox" id="traditional-style-3" name="traditional-style-3"class="styles_checkbox">
                         <label for="traditional-style-3" class="styles-preview_title">Traditional (562)</label>
                     </div>
@@ -59,15 +63,13 @@
                         <label for="contemporary-style-2" class="styles-preview_title">Contemporary (888)</label>
                     </div>
                 </div>
-                <button type="submit" class="styles_submit__button">
-                    <span class="styles_submit-button__text">More Styles +</span>
-                </button>
+                <button type="submit" class="styles_submit__button">More Styles +</button>
             </div>
 
             <!--Draggable filter-->
 
             <div class="sidebar_item price_filter">
-                <p class="sidebar_item_title">Price Range</p>
+                <p class="sidebar_item__title">Price Range</p>
 
                 <div class="sidebar_item_cost_wrapper">
                     <div class="sidebar_item_cost_item">
@@ -76,22 +78,27 @@
                     </div>
                     <div class="sidebar_item_cost_item">
                         <p class="sidebar_item_cost_item_title">Min $</p>
-                        <input type="text" value="10000" id="drag_item_input_max" class="sidebar_item_cost_item_input">
+                        <input type="text" value="4060" id="drag_item_input_max" class="sidebar_item_cost_item_input">
                     </div>
                     <button class="sidebar_item_cost_btn" type="submit">Go</button>
                 </div>
                 <div class="sidebar_item_cost_drag_wrapper">
                     <div class="sidebar_item_cost_drag_area" id="drag_item_area">
-                        <div class="sidebar_item_cost_drag_item" id="drag_item_min" style="left: 0"></div>
-                        <div class="sidebar_item_cost_drag_item" id="drag_item_max" style="left: 100%;"></div>
+                        <div class="sidebar_item_cost_drag_item" id="drag_item_min" style="left: 0">
+                            <img class="sidebar_item_cost_drag_item--icon" src="./images/dots-menu.svg" alt="">
+                        </div>
+                        <div class="sidebar_item_cost_drag_item" id="drag_item_max" style="left: 100%;">
+                            <img class="sidebar_item_cost_drag_item--icon" src="./images/dots-menu.svg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="sidebar_item colors_filter">
-                <div class="sidebar_item_header">
-                    <p class="sidebar_item_title">Colors</p>
-                    <span class="sidebar_item_header_arrow">></span>
+                <div class="sidebar_item__header">
+                    <p class="sidebar_item__title">Colors</p>
+                    <div class="colors_filter__tooltip"></div>
+                    <div class="hide_button"></div>
                 </div>
                 <div class="sidebar_item_row">
                     <input type="checkbox" id="row1" value="red">
@@ -101,38 +108,40 @@
                     </span>
                 </div>
                 <div class="sidebar_item_row">
-                    <input type="checkbox" id="row1" value="red">
-                    <label for="row1" class="sidebar_item_row_label">Blue</label>
+                    <input type="checkbox" id="row2" value="red">
+                    <label for="row2" class="sidebar_item_row_label">Blue</label>
                     <span class="sidebar_item_row_text">
                         1,221
                     </span>
                 </div>
                 <div class="sidebar_item_row">
-                    <input type="checkbox" id="row1" value="red">
-                    <label for="row1" class="sidebar_item_row_label">Green</label>
+                    <input type="checkbox" id="row3" value="red">
+                    <label for="row3" class="sidebar_item_row_label">Green</label>
                     <span class="sidebar_item_row_text">
                         1,221
                     </span>
                 </div>
                 <div class="sidebar_item_row">
-                    <input type="checkbox" id="row1" value="red">
-                    <label for="row1" class="sidebar_item_row_label">White</label>
+                    <input type="checkbox" id="row4" value="red">
+                    <label for="row4" class="sidebar_item_row_label">White</label>
                     <span class="sidebar_item_row_text">
                         1,221
                     </span>
                 </div>
                 <div class="sidebar_item_row">
-                    <input type="checkbox" id="row1" value="red">
-                    <label for="row1" class="sidebar_item_row_label">Yellow</label>
+                    <input type="checkbox" id="row5" value="red">
+                    <label for="row5" class="sidebar_item_row_label">Yellow</label>
                     <span class="sidebar_item_row_text">
                         1,221
                     </span>
             </div>
-                <button class="sidebar_item_row_btn">More Colors +</button>
+                <button class="sidebar_item_color_btn">More Colors +</button>
             </div>
         
             <div class="sidebar_item reviews_section">
-                <span class="sidebar_item__header">Reviews</span>
+                    <div class="sidebar_item__header">
+                            <p class="sidebar_item__title">Reviews</p>
+                    </div>
                     <div class="reviews_section__wrapper">
                         <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
                         <img class="reviews_icon" src="./images/rating-unactive.svg" alt="">
@@ -154,9 +163,9 @@
                 <div class="products-previews_header__wrapper">
                     <span class="products-previews_header">New Arrival Area Rugs</span>
                     <span class="products-previews_quantity">431 Results</span>
+                    <button class="show-filter-menu_button">Filter</button>
                 </div>
-                <button class="show-filter-menu-button">Filter</button>
-
+                
                 <div class="product_preview">
                     <img class="product_preview__image" src="./images/product-image@2x.jpg" alt="">
                     <div class="product_preview_content__wrapper">
