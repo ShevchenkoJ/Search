@@ -101,16 +101,16 @@ ProductCard.prototype.createCard = function () {
 
     productPreviewContend.appendChild(productTitle);
 
-    for (let i = 0; i < this.rating.amountStars; i++) {
+    for (var i = 0; i < this.rating.amountStars; i++) {
         if (i <= 2) {
-            const reviewIconScored = $('img', {
+            var reviewIconScored = $('img', {
                 class: 'reviews_icon',
                 src: './images/rating-scored.svg',
                 alt: '...',
             });
             reviewsWrapper.appendChild(reviewIconScored);
         } else {
-            const reviewIconUnActive = $('img', {
+            var reviewIconUnActive = $('img', {
                 class: 'reviews_icon',
                 src: './images/rating-unactive.svg',
                 alt: '...',

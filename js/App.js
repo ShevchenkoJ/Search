@@ -1,5 +1,6 @@
 function App() {
-    const search = new Search();
+    var search = new Search();
+    var filter = new MobileFilter();
 
     API.getAllData();
 }

@@ -1,7 +1,7 @@
 function $(tag, objectOfAttr) {
-    const elem = document.createElement(tag);
+    var elem = document.createElement(tag);
 
-    for (let key in objectOfAttr) {
+    for (var key in objectOfAttr) {
         if (key === 'text') {
             elem.textContent = objectOfAttr[key];
         } else {

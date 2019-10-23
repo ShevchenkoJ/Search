@@ -4,19 +4,19 @@ API.getDataByInputText = function(form, input) {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        let inputValue = input.value;
+        var inputValue = input.value;
 
         fetch('http://search.unbxd.io/fb853e3332f2645fac9d71dc63e09ec1/demo-unbxd700181503576558/search?&q=' + inputValue)
             .then(function (res) {
                 return res.json();
             })
             .then(function (res) {
-                const products = res.response.products;
+                var products = res.response.products;
 
-                const cardsContainer = new CardsContainer(products);
+                var cardsContainer = new CardsContainer(products);
                 cardsContainer.removeCards();
 
-                const cards = cardsContainer.createAllCards();
+                var cards = cardsContainer.createAllCards();
                 cardsContainer.showAllCards(cards);
             })
             .catch(function (e) {
@@ -31,10 +31,10 @@ API.getAllData = function() {
             return res.json();
         })
         .then(function (res) {
-            const products = res.response.products;
+            var products = res.response.products;
 
-            const cardsContainer = new CardsContainer(products);
-            const cards = cardsContainer.createAllCards();
+            var cardsContainer = new CardsContainer(products);
+            var cards = cardsContainer.createAllCards();
             cardsContainer.showAllCards(cards);
         })
         .catch(function (e) {

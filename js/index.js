@@ -1,1 +1,1 @@
-const Application = new App();
+var Application = new App();

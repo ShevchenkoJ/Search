@@ -1,6 +1,6 @@
 function Search() {
-    const form = document.forms.searchForm;
-    const searchInput = form.elements.searchbar;
+    var form = document.forms.searchForm;
+    var searchInput = form.elements.searchbar;
 
     this.inputHandler(form, searchInput);
 }

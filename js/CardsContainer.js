@@ -9,7 +9,7 @@ CardsContainer.prototype.showAllCards = function(allCards) {
         return;
     }
 
-    const container = $('div', {
+    var container = $('div', {
         class: 'cardsContainer'
     });
 
@@ -21,14 +21,14 @@ CardsContainer.prototype.showAllCards = function(allCards) {
 };
 
 CardsContainer.prototype.createAllCards = function () {
-    let cards = [];
+    var cards = [];
 
     this.data.forEach(function (dataItem) {
-        const title = dataItem.title;
-        const price = dataItem.price;
-        const imgUrl = dataItem.imageUrl[0];
-        const colorsLength = dataItem.colors.length;
-        const sizesLength = dataItem.size.length;
+        var title = dataItem.title;
+        var price = dataItem.price;
+        var imgUrl = dataItem.imageUrl[0];
+        var colorsLength = dataItem.colors.length;
+        var sizesLength = dataItem.size.length;
 
         cards.push(new ProductCard(title, price, imgUrl, colorsLength, sizesLength).createCard());
     });
@@ -37,7 +37,7 @@ CardsContainer.prototype.createAllCards = function () {
 };
 
 CardsContainer.prototype.removeCards = function () {
-    const container = document.querySelector('.cardsContainer');
+    var container = document.querySelector('.cardsContainer');
 
     if (!container) {
         return;
