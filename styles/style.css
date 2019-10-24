@@ -957,6 +957,11 @@ html body {
         height: 42rem;
     }
 }
+@media screen and (max-width: 350px) {
+:root {
+    font-size: 9px;
+}
+}
 
 @media screen and (max-width: 345px) {
     .styles-previews_container {
