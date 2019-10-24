@@ -744,6 +744,13 @@ html body {
     .styles_submit__button {
         width: 98%;
     }
+    
+    .searchbar_button__icon {
+    width: 1.8rem;
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
 
     .product_preview {
         width: 100%;
