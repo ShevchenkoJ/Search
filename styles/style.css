@@ -699,6 +699,20 @@ html body {
 
 }
 
+@media screen and (max-width: 987px) {
+   .searchbar_button__icon {
+        bottom: 0.2rem;
+    }
+}
+@media screen and (max-width: 810px) {
+.searchbar_button__icon {
+    width: 1.8rem;
+    position: relative;
+    bottom: 0.3rem;
+    right: 0.3rem;
+}
+}
+
 @media screen and (max-width: 768px) {
     :root {
         font-size: 10px;
